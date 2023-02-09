@@ -1,3 +1,40 @@
 body {
   text-align: center;
+  background: #79c2d0;
+}
+
+footer {
+  margin: 20px;
+}
+
+h1 {
+  margin: 0px;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+select,
+option {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+  font-family: "Poppins", sans-serif;
+  padding: 10px;
+}
+
+.date {
+  font-weight: 400;
 }
