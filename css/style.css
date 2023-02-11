@@ -32,6 +32,12 @@ option {
   font-family: "Poppins", sans-serif;
 }
 
+small {
+  font-size: 20px;
+  position: relative;
+  top: -4px;
+}
+
 .content {
   max-width: 650px;
   margin: auto;
