@@ -1,5 +1,6 @@
 function updateTime() {
   let losAngelesElement = document.querySelector("#los-angeles");
+
   let losAngelesDateElement = losAngelesElement.querySelector(".date");
   let losAngelesTimeElement = losAngelesElement.querySelector(".time");
   let losAngelesMoment = moment().tz("America/Los_Angeles");
@@ -33,13 +34,14 @@ function updateTime() {
 function updateCity(event) {
   let timeZone = event.target.value;
   let cityTime = moment().tz(timeZone);
+  let cityName = timeZone.replace("_", " ").split("/")[1];
 
   let citiesElement = document.querySelector("#cities");
 
   citiesElement.innerHTML = `<div class="row">
             <div class="col-6">
               <div>
-                <h2>${timeZone}</h2>
+                <h2>${cityName}</h2>
                 <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
               </div>
             </div>
