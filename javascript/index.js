@@ -2,19 +2,23 @@ let losAngelesElement = document.querySelector("#los-angeles");
 let losAngelesDateElement = losAngelesElement.querySelector(".date");
 let losAngelesTimeElement = losAngelesElement.querySelector(".time");
 
-losAngelesDateElement.innerHTML = `February 11th 2023`;
-losAngelesTimeElement.innerHTML = `21:04:23 <small>PM</small>`;
+losAngelesDateElement.innerHTML = moment().format("MMMM Do YYYY");
+losAngelesTimeElement.innerHTML = moment().format(
+  "hh:mm:ss [<small>]A[</small>]"
+);
 
 let amsterdamElement = document.querySelector("#amsterdam");
 let amsterdamDateElement = amsterdamElement.querySelector(".date");
 let amsterdamTimeElement = amsterdamElement.querySelector(".time");
 
-amsterdamDateElement.innerHTML = `February 11th 2023`;
-amsterdamTimeElement.innerHTML = `21:04:23 <small>PM</small>`;
+amsterdamDateElement.innerHTML = moment().format("MMMM Do YYYY");
+amsterdamTimeElement.innerHTML = moment().format(
+  "hh:mm:ss [<small>]A[</small>]"
+);
 
 let tokyoElement = document.querySelector("#tokyo");
 let tokyoDateElement = tokyoElement.querySelector(".date");
 let tokyoTimeElement = tokyoElement.querySelector(".time");
 
-tokyoDateElement.innerHTML = `February 11th 2023`;
-tokyoTimeElement.innerHTML = `21:04:23 <small>PM</small>`;
+tokyoDateElement.innerHTML = moment().format("MMMM Do YYYY");
+tokyoTimeElement.innerHTML = moment().format("hh:mm:ss [<small>]A[</small>]");
