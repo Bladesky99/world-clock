@@ -30,4 +30,28 @@ function updateTime() {
   );
 }
 
+function updateCity(event) {
+  let timeZone = event.target.value;
+  let cityTime = moment().tz(timeZone);
+
+  let citiesElement = document.querySelector("#cities");
+
+  citiesElement.innerHTML = `<div class="row">
+            <div class="col-6">
+              <div>
+                <h2>${timeZone}</h2>
+                <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="time">${cityTime.format(
+                "hh:mm:ss"
+              )} <small>${cityTime.format("A")} </small></div>
+            </div>
+          </div>`;
+}
+
+let dropdownMenu = document.querySelector("#dropdownMenu");
+dropdownMenu.addEventListener("change", updateCity);
+
 setInterval(updateTime, 1000);
